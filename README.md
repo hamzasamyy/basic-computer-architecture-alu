@@ -1,17 +1,38 @@
-# 💻 Basic Computer Design with ALU (Logisim)
+# 💻 16-bit Basic Computer Architecture with ALU (Logisim)
 
 ## 🚀 Overview
-A digital computer system designed and simulated using Logisim, implementing fundamental computer architecture concepts including registers, data flow, control logic, and an Arithmetic Logic Unit (ALU).
+Design and simulation of a 16-bit basic computer system in Logisim featuring a shared bus architecture, registers, memory unit, control logic, and an ALU supporting multiple arithmetic and logical operations.
+
+---
+
+## 📄 Project Report
+📥 **Full detailed report available here:**  
+👉 [View Project Report](./Computer_Organization_Project_Report.pdf)
+
+The report includes:
+- Complete system architecture explanation  
+- Bus and memory design  
+- Register implementation (AR, PC, DR, AC, IR, TR)  
+- ALU design and supported operations  
+- Instruction-level execution cycles  
+- Testing and validation  
 
 ---
 
 ## 🧠 Features
-- 🧮 Fully functional register system  
-- 🔄 Data transfer between components (bus system)  
-- ⚙️ Control logic for managing operations  
-- ➕ Arithmetic Logic Unit (ALU) supporting multiple operations  
-- 🧠 Demonstrates core computer architecture principles  
-- 🖥️ Fully simulated using Logisim  
+- 🧮 16-bit computer system design  
+- 🔄 Common bus architecture using multiplexer  
+- 🧠 6 registers (AR, PC, DR, AC, IR, TR)  
+- 💾 256 × 16-bit memory unit  
+- ⚙️ Control logic with clock synchronization  
+- ➕ ALU supporting:
+  - Addition  
+  - Subtraction  
+  - Multiplication  
+  - Division  
+  - Complement  
+  - XOR operations  
+- 🔁 Instruction cycle execution  
 
 ---
 
@@ -25,9 +46,10 @@ A digital computer system designed and simulated using Logisim, implementing fun
 ## 📂 Project Structure
 
 ```text
-basic-computer-logisim/
+basic-computer-architecture-alu/
 │
-├── basic_computer.circ   # Main computer design
+├── basic_computer.circ                    # Main Logisim circuit
+├── Computer_Organization_Project_Report.pdf
 ├── README.md
 ```
 
@@ -36,40 +58,39 @@ basic-computer-logisim/
 ## ▶️ How to Run
 
 1. Download and install Logisim  
-2. Open the `.circ` file  
-3. Run the simulation to observe:
+2. Open `basic_computer.circ`  
+3. Run the simulation using the clock  
+4. Observe:
+   - Data transfer through the bus  
    - Register operations  
-   - Data flow between components  
-   - ALU operations  
-   - Control signal behavior  
+   - ALU computations  
+   - Instruction execution cycles  
 
 ---
 
 ## 🧩 How It Works
-- The system is composed of:
-  - Registers for storing data  
-  - A shared bus for data transfer  
-  - Control logic to manage execution  
-  - An ALU for performing arithmetic and logical operations  
-- The ALU processes inputs based on control signals and outputs results to registers  
-- Demonstrates how a basic computer executes low-level operations  
-
----
-
-## 💡 Future Improvements
-- 🧠 Implement full instruction set architecture (ISA)  
-- 🔄 Add program counter (PC) and memory unit  
-- ⚡ Improve control unit (hardwired or microprogrammed)  
-- 📊 Add step-by-step execution visualization  
+- The system uses a **shared 16-bit bus** controlled by selection lines  
+- Registers and memory communicate through a **multiplexer-based bus system**  
+- The ALU takes inputs from registers and performs operations based on control signals  
+- Results are stored back into registers or memory  
+- The system simulates low-level instruction execution step by step  
 
 ---
 
 ## 📸 Demo
-(Add a screenshot of your circuit here)
+(Add a screenshot of your circuit)
 
 ```markdown
 ![Circuit](screenshot.png)
 ```
+
+---
+
+## 💡 Future Improvements
+- 🧠 Full instruction set implementation (ISA)  
+- 🔄 Advanced control unit (microprogrammed)  
+- ⚡ Pipeline simulation  
+- 📊 Visual step-by-step execution tracing  
 
 ---
 
