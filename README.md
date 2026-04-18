@@ -1,37 +1,36 @@
 # 💻 16-bit Basic Computer Architecture with ALU (Logisim)
 
 ## 🚀 Overview
-Design and simulation of a 16-bit basic computer system in Logisim featuring a shared bus architecture, registers, memory unit, control logic, and an ALU supporting multiple arithmetic and logical operations.
+Design and simulation of a 16-bit basic computer system in Logisim featuring a shared bus architecture, registers, memory unit, control logic, and an Arithmetic Logic Unit (ALU) supporting multiple arithmetic and logical operations.
 
 ---
 
-## 📄 Project Report
-📥 **Full detailed report available here:**  
-👉 [View Project Report](./Computer_Organization_Project_Report.pdf)
+## 📂 Milestones
 
-The report includes:
-- Complete system architecture explanation  
-- Bus and memory design  
-- Register implementation (AR, PC, DR, AC, IR, TR)  
-- ALU design and supported operations  
-- Instruction-level execution cycles  
-- Testing and validation  
+- 📘 [Milestone 1 – Basic Computer Architecture](./Milestone_1)
 
 ---
 
 ## 🧠 Features
 - 🧮 16-bit computer system design  
-- 🔄 Common bus architecture using multiplexer  
-- 🧠 6 registers (AR, PC, DR, AC, IR, TR)  
+- 🔄 Common bus architecture using multiplexer (MUX)  
+- 🧠 6 registers:
+  - AR (Address Register)  
+  - PC (Program Counter)  
+  - DR (Data Register)  
+  - AC (Accumulator)  
+  - IR (Instruction Register)  
+  - TR (Temporary Register)  
 - 💾 256 × 16-bit memory unit  
 - ⚙️ Control logic with clock synchronization  
 - ➕ ALU supporting:
+  - Data transfer  
   - Addition  
   - Subtraction  
   - Multiplication  
   - Division  
   - Complement  
-  - XOR operations  
+  - XOR  
 - 🔁 Instruction cycle execution  
 
 ---
@@ -48,9 +47,14 @@ The report includes:
 ```text
 basic-computer-architecture-alu/
 │
-├── basic_computer.circ                    # Main Logisim circuit
-├── Computer_Organization_Project_Report.pdf
+├── Milestone_1/
+│   ├── basic_computer.circ
+│   ├── milestone_1_report.pdf
+│   ├── main_circuit.png
+│   └── alu.png
+│
 ├── README.md
+├── LICENSE
 ```
 
 ---
@@ -58,7 +62,10 @@ basic-computer-architecture-alu/
 ## ▶️ How to Run
 
 1. Download and install Logisim  
-2. Open `basic_computer.circ`  
+2. Open:
+```bash
+Milestone_1/basic_computer.circ
+```
 3. Run the simulation using the clock  
 4. Observe:
    - Data transfer through the bus  
@@ -68,21 +75,36 @@ basic-computer-architecture-alu/
 
 ---
 
-## 🧩 How It Works
-- The system uses a **shared 16-bit bus** controlled by selection lines  
-- Registers and memory communicate through a **multiplexer-based bus system**  
-- The ALU takes inputs from registers and performs operations based on control signals  
-- Results are stored back into registers or memory  
-- The system simulates low-level instruction execution step by step  
+## 🖼️ System Design
+
+### Main Circuit
+![Main Circuit](Milestone_1/main_circuit.png)
+
+### ALU Design
+![ALU](Milestone_1/alu.png)
 
 ---
 
-## 📸 Demo
-(Add a screenshot of your circuit)
+## 📄 Project Report
+📥 Full detailed report available here:  
+👉 [Milestone 1 Report](./Milestone_1/milestone_1_report.pdf)
 
-```markdown
-![Circuit](screenshot.png)
-```
+The report includes:
+- System architecture explanation  
+- Bus and memory design  
+- Register implementation  
+- ALU design and operations  
+- Instruction cycle execution  
+- Testing and validation  
+
+---
+
+## 🧩 How It Works
+- A shared 16-bit bus connects all components using a multiplexer  
+- Registers and memory exchange data through the bus  
+- The ALU performs operations based on control signals  
+- Results are stored back in registers or memory  
+- The system simulates instruction-level execution step-by-step  
 
 ---
 
@@ -90,7 +112,7 @@ basic-computer-architecture-alu/
 - 🧠 Full instruction set implementation (ISA)  
 - 🔄 Advanced control unit (microprogrammed)  
 - ⚡ Pipeline simulation  
-- 📊 Visual step-by-step execution tracing  
+- 📊 Step-by-step execution visualization  
 
 ---
 
